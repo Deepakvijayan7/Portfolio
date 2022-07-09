@@ -7,10 +7,10 @@ import { response } from 'express';
 export class TestimonialService {
 private _getUrl="/testimonial"
   constructor(private http:HttpClient) { }
+//   getTestimonial(){
+//     return this.http.get("/testimonial");
+//   }
   getTestimonial(){
-    return this.http.get("/testimonial");
+    return this.http.get("http://localhost:8080/testimonial");
   }
-  // getTestimonial(){
-  //   return this.http.get("http://localhost:8080/testimonial");
-  // }
 }
