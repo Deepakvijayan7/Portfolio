@@ -1,0 +1,33 @@
+<div class="testimonials">
+    <h2><b>Testimonials</b></h2>
+    <p>People I've worked with have said some nice things...</p>
+   <div class="container">
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <!-- <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div> -->
+      <div class="carousel-inner carousel-testimonial" id="car">
+        <div class="carousel-item {{testimonial.class}}" *ngFor='let testimonial of testimonials'>
+          <div class="testimonial-box">
+              <img  [src] = 'testimonial.image'  class="mb-3">
+              <h4 class="mb-1">{{ testimonial.name }}</h4>
+              <label class="blockquote-footer mb-2">{{ testimonial.job }}</label>
+              <p>{{ testimonial.quote }}</p>
+          </div>
+        </div>
+      
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+</div>
